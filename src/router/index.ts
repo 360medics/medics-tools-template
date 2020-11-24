@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
+import OtherPage from '../views/OtherPage.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,11 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/other-page',
+    name: 'OtherPage',
+    component: OtherPage
   },
   {
     path: '/about',
@@ -21,7 +27,10 @@ const routes: Array<RouteConfig> = [
 ]
 
 const router = new VueRouter({
-  routes
+    routes,
+    //do NOT user mode: "history" or "abstract", we need hastags
+    //mode: "history",
+    mode: "hash",
 })
 
 export default router
