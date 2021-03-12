@@ -1,0 +1,42 @@
+{
+   "appData": {
+       "id": 21,
+       "name": "Test explications",
+   },
+   "tree": [
+       {
+           "id": 144,
+           "name": "Test titre",
+           "subtitle": "sous titre explication de la section",
+           "appId": 21,
+           "parentId": null,
+           "content": "",
+           "slug": "test-144",
+	         "submenu": false,
+           "children": [
+               {
+                   "id": 147,
+                   "name": "Menu 1",
+                   "subtitle": "Essai de sous titre",
+                   "appId": 21,
+                   "parentId": 144,
+                   "content": "<h3>The standard Lorem Ipsum passage</h3>",
+                   "slug": "Menu-1-147",
+                   "children": [],
+                  "submenu": false,
+               },
+               {
+                   "id": 148,
+                   "name": "Menu sans sous titre",
+                   "subtitle": "",
+                   "appId": 21,
+                   "parentId": 144,
+                   "content": "<h1>The standard Lorem Ipsum</h1>",
+                   "slug": "menu-148",
+                   "children": [],
+                   "submenu": false,
+               }
+           ]
+       }
+   ]
+}
