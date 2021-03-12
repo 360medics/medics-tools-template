@@ -1,0 +1,82 @@
+{
+  "appData": {
+    "id": 1,
+    "name": "Application d'exemple"
+  },
+  "tree": [
+    {
+      "id": 1,
+      "name": "Première section",
+      "subtitle": "Sous-titre facultatif",
+      "appId": 1,
+      "parentId": null,
+      "type": "list",
+      "content": "",
+      "slug": "premiere-section-1",
+      "submenu": false,
+      "children": [
+        {
+          "id": 2,
+          "name": "Titre",
+          "subtitle": "Sous-titre",
+          "appId": 1,
+          "parentId": 1,
+          "type": "html",
+          "content": "Contenu à afficher",
+          "slug": "titre-2",
+          "submenu": false,
+          "children": []
+        },
+        {
+          "id": 3,
+          "name": "Titre",
+          "subtitle": "",
+          "appId": 1,
+          "parentId": 1,
+          "type": "html",
+          "content": "<h1>The standard Lorem Ipsum</h1>",
+          "slug": "titre-3",
+          "submenu": false,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Deuxième section",
+      "subtitle": "",
+      "appId": 1,
+      "parentId": null,
+      "type": "list",
+      "content": "",
+      "slug": "deuxieme-section-4",
+      "submenu": false,
+      "children": [
+        {
+          "id": 5,
+          "name": "Titre",
+          "subtitle": "",
+          "appId": 1,
+          "parentId": 4,
+          "type": "html",
+          "content": "Contenu à afficher",
+          "slug": "titre-5",
+          "submenu": false,
+          "children": []
+        },
+        {
+          "id": 6,
+          "name": "Titre",
+          "subtitle": "",
+          "appId": 1,
+          "parentId": 4,
+          "type": "html",
+          "content": "<h1>The standard Lorem Ipsum</h1>",
+          "slug": "titre-6",
+          "submenu": false,
+          "children": []
+        }
+      ]
+    }
+  ]
+}
