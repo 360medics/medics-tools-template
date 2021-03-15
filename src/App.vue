@@ -1,29 +1,20 @@
 <template>
   <div id="app">
         <Header></Header>
-
-        <div>{{name}}</div>
-        <div class="main-categories">
-            <div v-for="cat in categories" :key="cat.id">
-                <router-link :to="'/'+cat.slug">{{cat.name}}</router-link>
-            </div>
-        </div>
-
+        <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
 import Header from "@/components/Header.vue"
-//import Auth from "./service/Auth"
 import DataService from "@/service/DataService"
 
 export default Vue.extend({
     components: { Header },
     data() {
         return {
-           name: "RIEN",
-           categories: [],
+           
         }
     },
     methods: {
@@ -31,8 +22,6 @@ export default Vue.extend({
     },
     mounted()
     {
-        //const apiKey = Auth.getApiKeyFromUrl()
-
         DataService.load()
             .then(() => {
                 this.name = DataService.$data.appData.name

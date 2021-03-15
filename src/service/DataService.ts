@@ -16,6 +16,10 @@ class DataServiceClass {
             })
         })
     }
+    
+    getList(slug: string){
+        // boucle
+    }
 }
 
 export default new DataServiceClass()
