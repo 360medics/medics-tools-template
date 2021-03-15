@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '@/views/Home.vue'
-import ListPage from '@/views/ListPage.vue'
+//import ListPage from '@/views/ListPage.vue'
+import ContentPage from '@/views/ContentPage.vue'
 
 Vue.use(VueRouter)
 
@@ -12,10 +13,15 @@ const routes: Array<RouteConfig> = [
         component: Home
     },
     {
-        path: '/list/:slug',
-        name: 'ListPage',
-        component: ListPage
+        path: '/score/:slug',
+        name: 'ContentPage',
+        component: ContentPage
     },
+    //{
+    //    path: '/list/:slug',
+    //    name: 'ListPage',
+    //    component: ListPage
+    //},
 ]
 
 const router = new VueRouter({
