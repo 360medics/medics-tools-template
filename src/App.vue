@@ -23,17 +23,13 @@ export default Vue.extend({
     mounted()
     {
         DataService.load()
-            .then(() => {
-                this.name = DataService.$data.appData.name
-                this.categories = DataService.$data.tree
-            }).catch(e => {
-                console.log(e)
-            })
     },
 })
 </script>
 
 <style>
+@import "./sass/global.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
