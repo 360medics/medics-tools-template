@@ -1,7 +1,9 @@
 <template>
   <div id="app">
         <Header></Header>
-        <router-view></router-view>
+        <div class="scrollable-content">
+            <router-view></router-view>
+        </div>
   </div>
 </template>
 
@@ -27,31 +29,27 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style lang="scss">
 @import "./sass/global.scss";
+@import "./sass/_variables.scss";
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
 
-position: fixed;
-  width: 100%;
-  height: 100%
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.scrollable-content {
+    margin-top: $headerHeight;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
 }
 </style>

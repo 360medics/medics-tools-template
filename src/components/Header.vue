@@ -15,9 +15,13 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style lang="scss">
+@import "../sass/_variables.scss";
+
 .header {
-    height: 60px;
-    background-color: blue;
+    position: fixed;
+    width: 100%;
+    height: $headerHeight;
+    background-color: rgb(108, 108, 202);
 }
 </style>
