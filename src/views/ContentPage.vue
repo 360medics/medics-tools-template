@@ -1,9 +1,15 @@
 <template>
   <div class="content-page">
+        
+        <BinetScore></BinetScore>
+        
 
-        <keep-alive>
+
+
+
+        <!--<keep-alive>
             <component v-bind:is="currentComponent"></component>
-        </keep-alive>
+        </keep-alive>-->
         
         <template v-if="notFound">
             <p>Page not found.</p>
@@ -18,13 +24,12 @@
 <script lang="ts">
 import Vue from "vue"
 import DataService from "@/service/DataService"
-import CllBallScore from "@/components/scores/CllBallScore.vue"
+//import CllBallScore from "@/components/scores/CllBallScore.vue"
 import BinetScore from "@/components/scores/BinetScore.vue"
 
 export default Vue.extend({
     name: "ContentPage",
     components: {
-        CllBallScore,
         BinetScore,
     },
     data()

@@ -1,32 +1,26 @@
 <template>
   <div class="home">
-      <!--<CriteresAcrEu></CriteresAcrEu>-->
-
-        <!--<BinetScore></BinetScore>-->
         
         <div class="main-categories">
-            <div v-for="item in categories" :key="item.id">
-                <div>{{item.name}}</div>
-                <div v-for="subItem in item.children" :key="subItem.id">
-                    <router-link :to="'/score/'+subItem.slug">{{subItem.name}}</router-link>
-                </div>
-                <!--<router-link :to="'/list/'+cat.slug">{{cat.name}}</router-link>-->
-            </div>
+            <List @truc="test($event)" :cats="categories"></List>
+            <input v-model="myValue" @change="onInputChange">
         </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
+import List from "@/components/List.vue"
 import BinetScore from "@/components/scores/BinetScore.vue"
 import DataService from "@/service/DataService"
 
 export default Vue.extend({
     name: "Home",
-    components: {BinetScore},
+    components: { List, BinetScore },
     data()
     {
         return {
+            myValue: 42,
             categories: []
         }
     },
@@ -39,5 +33,13 @@ export default Vue.extend({
                 console.log(e)
             })
     },
+    methods: {
+        onInputChange() {
+            console.log(this.myValue)
+        },
+        test(e: any) {
+            console.log("Sub item list clicuqed!", e)
+        }
+    }
 })
 </script>
