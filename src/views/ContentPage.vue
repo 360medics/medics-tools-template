@@ -1,16 +1,16 @@
 <template>
   <div class="content-page">
-      
-      <keep-alive>
-        <component v-bind:is="currentComponent"></component>
-      </keep-alive>
 
-      <template v-if="notFound">
-          <p>Page not found.</p>
-      </template>
+        <keep-alive>
+            <component v-bind:is="currentComponent"></component>
+        </keep-alive>
+        
+        <template v-if="notFound">
+            <p>Page not found.</p>
+        </template>
 
-      <!--<CllBallScore v-if="scoreName === 'cll-ball-3'"></CllBallScore>
-      <BinetScore v-if="scoreName === 'binet-2'"></BinetScore>
+        <!--<CllBallScore v-if="scoreName === 'cll-ball-3'"></CllBallScore>
+        <BinetScore v-if="scoreName === 'binet-2'"></BinetScore>
         -->
   </div>
 </template>

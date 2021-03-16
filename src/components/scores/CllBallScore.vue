@@ -1,7 +1,7 @@
 <template>
   <div class="score-1">
       <h2>Score CLL BALL</h2>
-    blalzfksdflkj
+      <p>@Todo</p>
   </div>
 </template>
 
