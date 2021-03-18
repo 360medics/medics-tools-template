@@ -5,6 +5,22 @@
             <List @truc="test($event)" :cats="categories"></List>
             <input v-model="myValue" @change="onInputChange">
         </div>
+
+        <div v-for="i in  [1,2,3,4,5,6,7,8,9,10]" :key="i">
+            <div>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+                Content <br>
+            </div>
+        </div>
   </div>
 </template>
 

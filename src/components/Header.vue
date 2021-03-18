@@ -1,6 +1,7 @@
 <template>
   <div class="header">
-   Mon header
+   <span>Mon header</span>
+    <a href="cmd://webview-close">CLOSE</a>
   </div>
 </template>
 
